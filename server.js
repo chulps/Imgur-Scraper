@@ -47,7 +47,8 @@ app.get("/scrape", function(req, res) {
     $("div.post").each(function(i, element) {
       // Save an empty result object
       var title = $(element).find("p").text();
-      var link = $(element).find("a");
+      var image = $(element).find("a");
+      var link = $(element).find("a").attr("href");
       console.log(title)
       console.log("https://imgur.com/" + link)
       console.log(" ")
